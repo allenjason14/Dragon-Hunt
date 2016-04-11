@@ -17,4 +17,8 @@ angular.module('dragonHunt').controller('mainCtrl', function($scope, hunt) {
   $scope.dragonHp = hunt.dragonHp;
 
   $scope.slaying = hunt.slaying;
+
+  $scope.dragMessage = hunt.dragMessage;
+
+  $scope.dragAttack = hunt.dragAttack;
 });
