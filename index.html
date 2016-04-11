@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="dragonHunt">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon Duel</title>
+    <link href="style.css" rel="stylesheet">
+  <!-- <link href="reset.css" rel="stylesheet">
+  <link href="normalize.css" rel="stylesheet"> -->
+  </head>
+  <main>
+  <body ng-controller="mainCtrl">
+
+  {{name}}
+<div class="header">
+  <p class="header-text">DRAGON DUEL</p>
+</div>
+<div class="main-section">
+  <div class="choice-buttons">
+    <button class="btn-rest" ng-click="tryRest()"> REST </button>
+    <button class="btn-run" ng-click="tryRun()"> RUN </button>
+    <button class="btn-attack" ng-click="tryAttack()"> ATTACK </button>
+  </div>
+<div class="lower-main">
+  <div class="center">
+    <div class="message1">{{dragonHp}}</div>
+    <div class="message2">{{humanHp}}</div>
+    <div class="message3">{{message}}</div>
+  </div>
+</div>
+</div>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.11/ng-grid.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="js/hunt.js"></script>
+  </body>
+</html>

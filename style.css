@@ -1,0 +1,84 @@
+
+
+.header{
+  width:100%;
+  height:125px;
+  position: relative;
+  background-image: url("images/divlineborder.jpg");
+  border: solid 15px black;
+}
+
+/*.headerdragon1 {
+  background-image:url("images/dragonbackground1.jpg");}
+.headerdragon2 {
+  background-image:url("images/dragonbackground2.jpg");}
+.headerdragon3 {
+  background-image:url("images/dragonbackground3.jpg");}
+.headerdragon4 {
+  background-image:url("images/dragonbackground4.jpg");}*/
+
+.header-text{
+  width:100%;
+  color:white;
+  font-size: 50pt;
+  font-family: serif;
+  text-align: center;
+  margin:0 auto 0 auto;
+  position:absolute;
+  bottom:0;
+  padding-bottom:15px;
+  text-outline: 2px 1px black;
+}
+
+.choice-buttons{
+  font-family:monospace;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.choice-buttons button{
+
+width: 250px;
+height: 100px;
+font-size: 25pt;
+color: red;
+text-shadow: #000 1px 1px 1px;
+background-image: url("images/blackmarble.jpg");
+margin: -5px 10px 0 10px
+border: solid 4px black;
+font-family:sans-serif;
+text-shadow:
+   -1px -1px 0 #000,
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+   1px 1px 0 #000;
+}
+
+.main-section{
+  width:100%;
+  height:900px;
+  background-image: url("images/dragonbackground2.jpg");
+  border: solid 15px black;
+
+}
+
+.center{
+  width:600px;
+  height:600px;
+  margin-left: auto;
+  margin-right: auto;
+  background:white;
+  margin-top:30px;
+  border: solid 15px black;
+}
+
+.message1{
+  background: yellow;
+}
+.message2{
+  background: green;
+}
+
+.message3{
+  background: pink;
+}
