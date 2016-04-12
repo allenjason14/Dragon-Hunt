@@ -42,16 +42,10 @@ width: 250px;
 height: 100px;
 font-size: 25pt;
 color: red;
-text-shadow: #000 1px 1px 1px;
 background-image: url("images/blackmarble.jpg");
 margin: -5px 10px 0 10px
 border: solid 4px black;
 font-family:sans-serif;
-text-shadow:
-   -1px -1px 0 #000,
-   1px -1px 0 #000,
-   -1px 1px 0 #000,
-   1px 1px 0 #000;
 }
 
 .main-section{
@@ -67,16 +61,30 @@ text-shadow:
   height:600px;
   margin-left: auto;
   margin-right: auto;
-  background:white;
+  background:	#F5F5F5;
   margin-top:30px;
   border: solid 15px black;
 }
 
-.message1{
-  background: yellow;
+.containers{
+  height:230px;
+  width:245px;
+  background: #564657;
+  margin: 20px 0 20px 20px;
+  border: black 10px solid;
+  display: inline-block;
+  text-align: center;
+  color:red;
+  font-size: 30px;
 }
-.message2{
-  background: green;
+
+.counterName{
+  margin-top: 0;
+  border: white 10px solid;
+}
+.message1{
+font-size: 120px;
+margin-top: 0;
 }
 
 .message3{

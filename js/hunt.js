@@ -22,14 +22,12 @@ angular.module("dragonHunt").service('hunt', function(){
     this.dragAttack = function(){
       damageDrag = random() + 2;
       var randomNum2 = random();
-      console.log(randomNum2);
       if(randomNum2 === 1) {
         this.dragMessage = "The Beast Strkes, but Misses";
       }
       else if(randomNum2 <= 4){
         this.dragMessage = "The Dragon Strikes! " + damageDrag + " damage!";
         this.humanHp -= damageDrag;
-        console.log('done');
       }
 
     this.humanDead = function(){
@@ -38,21 +36,13 @@ angular.module("dragonHunt").service('hunt', function(){
         this.message = "Defeat. The Dragon is Victorious . . .";
         this.dragonMessage = "You Have been defeated";
         this.humanHp = "Defeated";
+        return
       }
     }
   }
 
-    // if(random() === 1) {
-    //   this.message = "Miss";
-    //   dragAttack();
-    // }
-    // else if(random() <= 4){}
-    //   damage = random();
-    //   this.message = "You struck the beast! " + damage + " damage!";
-    //   this.dragonHp -= damage;
 
-
-    var dragSlayed = function(){
+    this.dragSlayed = function(){
       if(this.dragonHp <= 0) {
         this.slaying = false;
         this.dragonHp = "Defeated";
@@ -72,24 +62,26 @@ angular.module("dragonHunt").service('hunt', function(){
         this.humanHp += damage;
       }
       this.dragAttack();
-
     }
 
     this.tryRun = function(){
       var randomNum = random();
       damage = random();
-      if(randomNum <= 2) {
+      if(randomNum < 3) {
         this.message = "The Dragon Has You Cornered! You Couldn't Run!";
         this.dragAttack();
       }
+
       else if(randomNum <= 4){
         this.message = "You Hid from the Monster! You Restored " + damage + " Energy!";
         this.humanHp += damage;
+        this.dragMessage = "The Dragon Searched in Vain"
       }
       else if(randomNum === 5){
         this.message = "You Lost the Beast and Restored " + (damage + 3) + " Energy, but the Dragon Also Rested."
         this.humanHp += (damage + 3);
         this.dragonHp += 5;
+        this.dragMessage = "The Beast is Rejuvinated as Well."
       }
     }
 
@@ -103,14 +95,15 @@ angular.module("dragonHunt").service('hunt', function(){
       else if(randomNum <= 4){
         this.message = "You Struck the Beast! " + damage + " Damage!";
         this.dragonHp -= damage;
-          dragSlayed();
-        this.dragAttack();
+          // dragSlayed();
+          this.dragAttack();
         }
 
       else if(randomNum === 5){
         this.message = "A Dire Wound! " + (damage + 3) + " Damage! Move Quickly While the Beast is Stunned";
         this.dragonHp -= (damage + 3);
-          dragSlayed();
+        this.dragMessage = "The Monster is Unable to Move!"
+          // dragSlayed();
         }
       }
     });
